@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">Literary Quiz</string>
+
+    <!--
+      Question and answers one. [CHAR LIMIT=NONE]
+    -->
+    <string name="question_one"> Qual o autor do livro <i>Ensaio sobre a Cegueira</i>?</string>
+    <string name="question_one_answer_one" translatable="false">Pepetela</string>
+    <string name="question_one_answer_two" translatable="false">Agustina Bessa-Luís</string>
+    <string name="question_one_answer_three" translatable="false">José Saramago</string>
+    <!--
+      Question and answers two. [CHAR LIMIT=NONE]
+    -->
+    <string name="question_two">Qual dos seguintes livros foi escrito por <xliff:g id="author name">José Rodrigues dos Santos</xliff:g>?</string>
+    <string name="question_two_answer_one"> Códex 632</string>
+    <string name="question_two_answer_two"> O Ano da Morte de Ricardo Reis</string>
+    <string name="question_two_answer_three"> O Nome da Rosa</string>
+    <string name="question_two_answer_four"> A Fórmula de Deus </string>
+    <!--
+      Question and answers three. [CHAR LIMIT=NONE]
+    -->
+    <string name="question_three">Quais destes autores ganhou um Prémio Nobel?</string>
+    <string name="question_three_answer_one" translatable="false"> Mario Vargas Llosa</string>
+    <string name="question_three_answer_two" translatable="false"> Gabriel García Márquez</string>
+    <string name="question_three_answer_three" translatable="false"> Jorge Amado</string>
+    <string name="question_three_answer_four" translatable="false"> José Saramago </string>
+    <!--
+     Question and answers four. [CHAR LIMIT=NONE]
+   -->
+    <string name="question_four">Quem escreveu <xliff:g id="book name"><i>Geração Utopia</i></xliff:g>?</string>
+    <string name="question_four_answer_one" translatable="false"> Mia Couto</string>
+    <string name="question_four_answer_two" translatable="false"> José Agualusa</string>
+    <string name="question_four_answer_three" translatable="false"> Pepetela</string>
+    <string name="question_four_answer_four" translatable="false"> António Lobo Antunes </string>
+    <!--
+     Question and answers five. [CHAR LIMIT=NONE]
+   -->
+    <string name="question_five">Onde nasceu Mia Couto?</string>
+    <string name="question_five_answer">País</string>
+    <!--
+     Question and answers five. [CHAR LIMIT=NONE]
+   -->
+    <string name="submit" translatable="false">Submit</string>
+    <!--
+     Final Message. [CHAR LIMIT=NONE]
+   -->
+    <!--
+      It will be shown in the format of "Name: Amy" where Amy is the
+      user's name. [CHAR LIMIT=NONE]
+    -->
+    <string name="user_name"> Nome: <xliff:g id="Name" example="Amy"></xliff:g>%s</string>
+    <string name="counter">Acertou <xliff:g id="counter" example="2">%d</xliff:g> de 5</string>
+    <string name="thank_you">Obrigado!</string>
+
+</resources>
