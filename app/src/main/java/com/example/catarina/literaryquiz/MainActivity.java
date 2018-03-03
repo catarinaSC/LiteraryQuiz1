@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
     TextView name;
     TextView questionOneAnswerThree;
+    TextView questionTwoAnswerOne;
     TextView questionTwoAnswerTwo;
+    TextView questionTwoAnswerThree;
     TextView questionTwoAnswerFour;
     TextView questionThreeAnswerOne;
     TextView questionThreeAnswerTwo;
+    TextView questionThreeAnswerThree;
     TextView questionThreeAnswerFour;
     TextView questionFourAnswerThree;
     TextView questionFiveAnswer;
@@ -35,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
         picture.setImageResource(R.drawable.books);
         name = findViewById(R.id.name);
         questionOneAnswerThree = findViewById(R.id.question_one_answer_three);
+        questionTwoAnswerOne = findViewById(R.id.question_two_answer_one);
         questionTwoAnswerTwo = findViewById(R.id.question_two_answer_two);
+        questionTwoAnswerThree = findViewById(R.id.question_two_answer_three);
         questionTwoAnswerFour = findViewById(R.id.question_two_answer_four);
         questionThreeAnswerOne = findViewById(R.id.question_three_answer_one);
         questionThreeAnswerTwo = findViewById(R.id.question_three_answer_two);
+        questionThreeAnswerThree = findViewById(R.id.question_three_answer_three);
         questionThreeAnswerFour = findViewById(R.id.question_three_answer_four);
         questionFourAnswerThree = findViewById(R.id.question_four_answer_three);
         questionFiveAnswer = findViewById(R.id.question_five_answer);
@@ -61,11 +67,21 @@ public class MainActivity extends AppCompatActivity {
 
         //Answer Two. CheckBox
 
+        CheckBox questionTwoAnswerOneCheckBox = (CheckBox) questionTwoAnswerOne;
+        boolean isQuestionTwoAnswerOne = questionTwoAnswerOneCheckBox.isChecked();
         CheckBox questionTwoAnswerTwoCheckBox = (CheckBox) questionTwoAnswerTwo;
         boolean isQuestionTwoAnswerTwo = questionTwoAnswerTwoCheckBox.isChecked();
+        CheckBox questionTwoAnswerThreeCheckBox = (CheckBox) questionTwoAnswerThree;
+        boolean isQuestionTwoAnswerThree = questionTwoAnswerThreeCheckBox.isChecked();
         CheckBox questionTwoAnswerFourCheckBox = (CheckBox) questionTwoAnswerFour;
         boolean isQuestionTwoAnswerFour = questionTwoAnswerFourCheckBox.isChecked();
-        boolean isQuestionTwoTotal = isQuestionTwoAnswerTwo && isQuestionTwoAnswerFour;
+        boolean isQuestionTwoTotal;
+        if (isQuestionTwoAnswerTwo || isQuestionTwoAnswerThree) {
+            isQuestionTwoTotal = false;
+        } else {
+            isQuestionTwoTotal = isQuestionTwoAnswerOne && isQuestionTwoAnswerFour;
+        }
+
 
         //Answer Three. CheckBox
 
@@ -73,9 +89,16 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestionThreeAnswerOne = questionThreeAnswerOneCheckBox.isChecked();
         CheckBox questionThreeAnswerTwoCheckBox = (CheckBox) questionThreeAnswerTwo;
         boolean isQuestionThreeAnswerTwo = questionThreeAnswerTwoCheckBox.isChecked();
+        CheckBox questionThreeAnswerThreeCheckBox = (CheckBox) questionThreeAnswerThree;
+        boolean isQuestionThreeAnswerThree = questionThreeAnswerThreeCheckBox.isChecked();
         CheckBox questionThreeAnswerFourCheckBox = (CheckBox) questionThreeAnswerFour;
         boolean isQuestionThreeAnswerFour = questionThreeAnswerFourCheckBox.isChecked();
-        boolean isQuestionThreeTotal = isQuestionThreeAnswerOne && isQuestionThreeAnswerTwo && isQuestionThreeAnswerFour;
+        boolean isQuestionThreeTotal;
+        if (isQuestionThreeAnswerThree) {
+            isQuestionThreeTotal = false;
+        } else {
+            isQuestionThreeTotal = isQuestionThreeAnswerOne && isQuestionThreeAnswerTwo && isQuestionThreeAnswerFour;
+        }
 
         //Answer Four. RadioButton
 
